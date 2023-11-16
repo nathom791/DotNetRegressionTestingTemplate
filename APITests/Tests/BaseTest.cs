@@ -8,8 +8,7 @@ namespace APITests.Tests
         [SetUp]
         public void Setup()
         {
-            var projectDir = Directory.GetCurrentDirectory();
-            var configPath = Path.Combine(projectDir, "appsettings.json");
+            var configPath = Path.Combine(FileManagement.ProjectDir, "appsettings.json");
 
             Configuration = new ConfigurationBuilder()
                 .AddJsonFile(configPath)
